@@ -9,4 +9,6 @@ import Foundation
 
 class AppDependencies {
     
+    let coreDataStack = CoreDataStack()
+    
 }

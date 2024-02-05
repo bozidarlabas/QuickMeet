@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A52D39402B71600700969D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D393F2B71600700969D39 /* AppDelegate.swift */; };
-		A52D39442B71600700969D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39432B71600700969D39 /* ViewController.swift */; };
 		A52D39492B71600A00969D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52D39482B71600A00969D39 /* Assets.xcassets */; };
 		A52D394C2B71600A00969D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52D394A2B71600A00969D39 /* LaunchScreen.storyboard */; };
 		A52D39572B71600B00969D39 /* QuickMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39562B71600B00969D39 /* QuickMeetTests.swift */; };
@@ -24,6 +23,10 @@
 		A52D39852B71655000969D39 /* AppointmentDetailsViewController+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */; };
 		A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */; };
 		A52D39892B7165F400969D39 /* AppointmentDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39882B7165F400969D39 /* AppointmentDetailsPresenter.swift */; };
+		A52D39902B7168C800969D39 /* QuickMeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A52D398E2B7168C800969D39 /* QuickMeet.xcdatamodeld */; };
+		A52D39932B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39912B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift */; };
+		A52D39942B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39922B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift */; };
+		A52D399C2B716B0A00969D39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D399B2B716B0A00969D39 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,6 @@
 /* Begin PBXFileReference section */
 		A52D393C2B71600700969D39 /* QuickMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52D393F2B71600700969D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A52D39432B71600700969D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A52D39482B71600A00969D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A52D394B2B71600A00969D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52D394D2B71600A00969D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,10 @@
 		A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDetailsViewController+Details.swift"; sourceTree = "<group>"; };
 		A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListPresenter.swift; sourceTree = "<group>"; };
 		A52D39882B7165F400969D39 /* AppointmentDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsPresenter.swift; sourceTree = "<group>"; };
+		A52D398F2B7168C800969D39 /* QuickMeet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickMeet.xcdatamodel; sourceTree = "<group>"; };
+		A52D39912B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A52D39922B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A52D399B2B716B0A00969D39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +123,6 @@
 			children = (
 				A52D396F2B7161F100969D39 /* App */,
 				A52D39702B7161F500969D39 /* Features */,
-				A52D39432B71600700969D39 /* ViewController.swift */,
 				A52D39482B71600A00969D39 /* Assets.xcassets */,
 				A52D394A2B71600A00969D39 /* LaunchScreen.storyboard */,
 				A52D394D2B71600A00969D39 /* Info.plist */,
@@ -145,10 +150,12 @@
 		A52D396F2B7161F100969D39 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39972B716AE200969D39 /* CoreData */,
 				A52D39752B71632500969D39 /* Coordinator */,
 				A52D393F2B71600700969D39 /* AppDelegate.swift */,
 				A52D397A2B71638500969D39 /* AppDependencies.swift */,
 				A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */,
+				A52D398E2B7168C800969D39 /* QuickMeet.xcdatamodeld */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -237,6 +244,32 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A52D39952B716A2A00969D39 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39962B716A3600969D39 /* AppointmentItem */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A52D39962B716A3600969D39 /* AppointmentItem */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39912B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift */,
+				A52D39922B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift */,
+			);
+			path = AppointmentItem;
+			sourceTree = "<group>";
+		};
+		A52D39972B716AE200969D39 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39952B716A2A00969D39 /* Models */,
+				A52D399B2B716B0A00969D39 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,15 +402,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52D399C2B716B0A00969D39 /* CoreDataStack.swift in Sources */,
 				A52D39892B7165F400969D39 /* AppointmentDetailsPresenter.swift in Sources */,
 				A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */,
 				A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */,
+				A52D39902B7168C800969D39 /* QuickMeet.xcdatamodeld in Sources */,
 				A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */,
-				A52D39442B71600700969D39 /* ViewController.swift in Sources */,
+				A52D39942B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */,
 				A52D397D2B7164D300969D39 /* AppointmentListViewController.swift in Sources */,
 				A52D397F2B7164E600969D39 /* AppointmentListViewController+Design.swift in Sources */,
 				A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */,
 				A52D39852B71655000969D39 /* AppointmentDetailsViewController+Details.swift in Sources */,
+				A52D39932B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */,
 				A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
 				A52D39832B71652C00969D39 /* AppointmentDetailsViewController.swift in Sources */,
@@ -717,6 +753,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A52D398E2B7168C800969D39 /* QuickMeet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A52D398F2B7168C800969D39 /* QuickMeet.xcdatamodel */,
+			);
+			currentVersion = A52D398F2B7168C800969D39 /* QuickMeet.xcdatamodel */;
+			path = QuickMeet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A52D39342B71600700969D39 /* Project object */;
 }
