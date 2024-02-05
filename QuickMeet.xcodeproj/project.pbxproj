@@ -24,6 +24,8 @@
 		A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */; };
 		A52D39832B71652C00969D39 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39822B71652C00969D39 /* AppointmentDetailsViewController.swift */; };
 		A52D39852B71655000969D39 /* AppointmentDetailsViewController+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */; };
+		A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */; };
+		A52D39892B7165F400969D39 /* AppointmentDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39882B7165F400969D39 /* AppointmentDetailsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructViewsProtocol.swift; sourceTree = "<group>"; };
 		A52D39822B71652C00969D39 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
 		A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDetailsViewController+Details.swift"; sourceTree = "<group>"; };
+		A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListPresenter.swift; sourceTree = "<group>"; };
+		A52D39882B7165F400969D39 /* AppointmentDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 			children = (
 				A52D39822B71652C00969D39 /* AppointmentDetailsViewController.swift */,
 				A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */,
+				A52D39882B7165F400969D39 /* AppointmentDetailsPresenter.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 		A52D39742B7162E900969D39 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */,
 				A52D397C2B7164D300969D39 /* AppointmentListViewController.swift */,
 				A52D397E2B7164E600969D39 /* AppointmentListViewController+Design.swift */,
 			);
@@ -338,6 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52D39892B7165F400969D39 /* AppointmentDetailsPresenter.swift in Sources */,
+				A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */,
 				A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */,
 				A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */,
 				A52D39442B71600700969D39 /* ViewController.swift in Sources */,
