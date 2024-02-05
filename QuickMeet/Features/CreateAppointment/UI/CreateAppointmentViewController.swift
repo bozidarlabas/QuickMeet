@@ -1,5 +1,5 @@
 //
-//  AppointmentDetailsViewController.swift
+//  CreateAppointmentViewController.swift
 //  QuickMeet
 //
 //  Created by Bozidar Labas on 05.02.2024..
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class AppointmentDetailsViewController: UIViewController {
+class CreateAppointmentViewController: UIViewController {
     
     // Properties
-    private var presenter: AppointmentDetailsPresenter!
+    private var presenter: CreateAppointmentPresenter!
     
-    convenience init(presenter: AppointmentDetailsPresenter) {
+    convenience init(presenter: CreateAppointmentPresenter) {
         self.init()
         self.presenter = presenter
     }

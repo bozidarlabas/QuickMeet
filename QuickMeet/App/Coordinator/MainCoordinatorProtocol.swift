@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol MainCoordinatorProtocol {
+protocol MainCoordinatorProtocol: AnyObject {
     
     func presentAppointmentListScreen()
     
-    func presentAppointmenDetailstScreen()
+    func presentCreateAppointmentScreen()
     
 }

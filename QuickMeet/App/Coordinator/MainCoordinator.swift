@@ -23,15 +23,19 @@ class MainCoordinator: MainCoordinatorProtocol {
     }
     
     func presentAppointmentListScreen() {
-        let presenter = AppointmentListPresenter()
+        let presenter = AppointmentListPresenter(coordinator: self)
         let viewController = AppointmentListViewController(presenter: presenter)
         navigation.pushViewController(viewController, animated: true)
     }
     
-    func presentAppointmenDetailstScreen() {
-        let presenter = AppointmentDetailsPresenter()
-        let viewController = AppointmentDetailsViewController(presenter: presenter)
-        navigation.pushViewController(viewController, animated: true)
+    func presentCreateAppointmentScreen() {
+        let presenter = CreateAppointmentPresenter()
+        let viewController = CreateAppointmentViewController(presenter: presenter)
+        if let delegate = navigation.topViewController as? UIViewControllerTransitioningDelegate {
+            viewController.transitioningDelegate = delegate
+        }
+        viewController.modalPresentationStyle = .custom
+        navigation.present(viewController, animated: true)
     }
     
     private func presentInWindow() {
