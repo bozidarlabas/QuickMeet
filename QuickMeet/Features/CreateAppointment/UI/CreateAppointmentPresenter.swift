@@ -9,4 +9,6 @@ import Foundation
 
 class CreateAppointmentPresenter {
     
+    let locations = ["San Diego", "St. George", "Park City", "Dallas", "Memphis", "Orlando"]
+    
 }

@@ -31,6 +31,8 @@
 		A52D39A22B71700C00969D39 /* UIButton+tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39A12B71700C00969D39 /* UIButton+tap.swift */; };
 		A52D39A42B7171C200969D39 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39A32B7171C200969D39 /* Colors.swift */; };
 		A52D39A72B7172EF00969D39 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39A62B7172EF00969D39 /* CircularButton.swift */; };
+		A52D39AE2B717A5C00969D39 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A52D39AD2B717A5C00969D39 /* Localizable.xcstrings */; };
+		A52D39B12B717A9B00969D39 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39B02B717A9B00969D39 /* String+localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		A52D39A12B71700C00969D39 /* UIButton+tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+tap.swift"; sourceTree = "<group>"; };
 		A52D39A32B7171C200969D39 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A52D39A62B7172EF00969D39 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		A52D39AD2B717A5C00969D39 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A52D39B02B717A9B00969D39 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				A52D39A52B7172E200969D39 /* ReusableUIComponents */,
+				A52D39AF2B717A8600969D39 /* FoundationExtensions */,
 				A52D39A02B716FFE00969D39 /* UIExtensions */,
 				A52D399D2B716DC400969D39 /* Animation */,
 				A52D39972B716AE200969D39 /* CoreData */,
@@ -168,6 +173,7 @@
 				A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */,
 				A52D398E2B7168C800969D39 /* QuickMeet.xcdatamodeld */,
 				A52D39A32B7171C200969D39 /* Colors.swift */,
+				A52D39AD2B717A5C00969D39 /* Localizable.xcstrings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -308,6 +314,14 @@
 			path = ReusableUIComponents;
 			sourceTree = "<group>";
 		};
+		A52D39AF2B717A8600969D39 /* FoundationExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39B02B717A9B00969D39 /* String+localization.swift */,
+			);
+			path = FoundationExtensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +428,7 @@
 			files = (
 				A52D394C2B71600A00969D39 /* LaunchScreen.storyboard in Resources */,
 				A52D39492B71600A00969D39 /* Assets.xcassets in Resources */,
+				A52D39AE2B717A5C00969D39 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +472,7 @@
 				A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
 				A52D39832B71652C00969D39 /* CreateAppointmentViewController.swift in Sources */,
+				A52D39B12B717A9B00969D39 /* String+localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
