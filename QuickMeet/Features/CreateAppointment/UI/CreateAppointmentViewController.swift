@@ -17,6 +17,7 @@ class CreateAppointmentViewController: UIViewController {
     // Views
     var dateLabel = UILabel()
     var dateTimePicker = UIDatePicker()
+    var locationLabel = UILabel()
     var button = UIButton()
     
     let actionClosure = { (action: UIAction) in

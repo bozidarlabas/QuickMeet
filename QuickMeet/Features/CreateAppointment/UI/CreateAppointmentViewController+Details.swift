@@ -21,6 +21,10 @@ extension CreateAppointmentViewController: ConstructViewsProtocol  {
         dateLabel.text = "title_date".localized
  
         view.addSubview(dateTimePicker)
+        
+        view.addSubview(locationLabel)
+        locationLabel.text = "title_location".localized
+        
         view.addSubview(button)
         button.menu = UIMenu(options: .displayInline, children: menuChildren)
         button.showsMenuAsPrimaryAction = true
@@ -37,7 +41,10 @@ extension CreateAppointmentViewController: ConstructViewsProtocol  {
         dateTimePicker.layer.cornerRadius = 4
         dateTimePicker.layer.masksToBounds = true
         
-        button.setImage(UIImage(systemName: "arrow.down.circle"), for: .normal)
+        locationLabel.textColor = .white
+        locationLabel.font = UIFont.systemFont(ofSize: 20.0)
+        
+        button.setImage(UIImage(named: "icon_dropdown"), for: .normal)
         button.semanticContentAttribute = .forceRightToLeft
     }
     
@@ -45,6 +52,7 @@ extension CreateAppointmentViewController: ConstructViewsProtocol  {
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         dateTimePicker.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
+        locationLabel.translatesAutoresizingMaskIntoConstraints = false
         
         // Date label layout
         NSLayoutConstraint.activate([
@@ -59,9 +67,16 @@ extension CreateAppointmentViewController: ConstructViewsProtocol  {
             dateTimePicker.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
         ])
         
+        // locationButton button
+        NSLayoutConstraint.activate([
+            locationLabel.topAnchor.constraint(equalTo: dateTimePicker.bottomAnchor, constant: 15),
+            locationLabel.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
+            locationLabel.trailingAnchor.constraint(equalTo: dateLabel.trailingAnchor)
+        ])
+        
         // Locations dropdown
         NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: dateTimePicker.bottomAnchor, constant: 15),
+            button.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 15),
             button.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
         ])
         
