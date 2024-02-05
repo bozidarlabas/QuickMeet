@@ -19,6 +19,11 @@
 		A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39762B71633000969D39 /* MainCoordinator.swift */; };
 		A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39782B71633900969D39 /* MainCoordinatorProtocol.swift */; };
 		A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D397A2B71638500969D39 /* AppDependencies.swift */; };
+		A52D397D2B7164D300969D39 /* AppointmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D397C2B7164D300969D39 /* AppointmentListViewController.swift */; };
+		A52D397F2B7164E600969D39 /* AppointmentListViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D397E2B7164E600969D39 /* AppointmentListViewController+Design.swift */; };
+		A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */; };
+		A52D39832B71652C00969D39 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39822B71652C00969D39 /* AppointmentDetailsViewController.swift */; };
+		A52D39852B71655000969D39 /* AppointmentDetailsViewController+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		A52D39762B71633000969D39 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A52D39782B71633900969D39 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		A52D397A2B71638500969D39 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		A52D397C2B7164D300969D39 /* AppointmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListViewController.swift; sourceTree = "<group>"; };
+		A52D397E2B7164E600969D39 /* AppointmentListViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentListViewController+Design.swift"; sourceTree = "<group>"; };
+		A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructViewsProtocol.swift; sourceTree = "<group>"; };
+		A52D39822B71652C00969D39 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
+		A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDetailsViewController+Details.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,7 @@
 				A52D39752B71632500969D39 /* Coordinator */,
 				A52D393F2B71600700969D39 /* AppDelegate.swift */,
 				A52D397A2B71638500969D39 /* AppDependencies.swift */,
+				A52D39802B7164FF00969D39 /* ConstructViewsProtocol.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -172,6 +183,8 @@
 		A52D39732B7162E500969D39 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39822B71652C00969D39 /* AppointmentDetailsViewController.swift */,
+				A52D39842B71655000969D39 /* AppointmentDetailsViewController+Details.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -179,6 +192,8 @@
 		A52D39742B7162E900969D39 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A52D397C2B7164D300969D39 /* AppointmentListViewController.swift */,
+				A52D397E2B7164E600969D39 /* AppointmentListViewController+Design.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -326,9 +341,14 @@
 				A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */,
 				A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */,
 				A52D39442B71600700969D39 /* ViewController.swift in Sources */,
+				A52D397D2B7164D300969D39 /* AppointmentListViewController.swift in Sources */,
+				A52D397F2B7164E600969D39 /* AppointmentListViewController+Design.swift in Sources */,
 				A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */,
+				A52D39852B71655000969D39 /* AppointmentDetailsViewController+Details.swift in Sources */,
+				A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
 				A52D39422B71600700969D39 /* SceneDelegate.swift in Sources */,
+				A52D39832B71652C00969D39 /* AppointmentDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
