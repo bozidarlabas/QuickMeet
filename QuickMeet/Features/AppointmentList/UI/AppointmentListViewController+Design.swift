@@ -22,7 +22,7 @@ extension AppointmentListViewController: ConstructViewsProtocol  {
     }
     
     func styleViews() {
-        
+        view.backgroundColor = .white
     }
     
     func defineLayoutForViews() {

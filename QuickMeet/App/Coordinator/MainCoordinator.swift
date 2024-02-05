@@ -9,7 +9,6 @@ import UIKit
 
 class MainCoordinator: MainCoordinatorProtocol {
     
-    
     private var window: UIWindow
     private var navigation: UINavigationController = UINavigationController()
     private var appDependencies = AppDependencies()
@@ -24,7 +23,15 @@ class MainCoordinator: MainCoordinatorProtocol {
     }
     
     func presentAppointmentListScreen() {
-        
+        let presenter = AppointmentListPresenter()
+        let viewController = AppointmentListViewController(presenter: presenter)
+        navigation.pushViewController(viewController, animated: true)
+    }
+    
+    func presentAppointmenDetailstScreen() {
+        let presenter = AppointmentDetailsPresenter()
+        let viewController = AppointmentDetailsViewController(presenter: presenter)
+        navigation.pushViewController(viewController, animated: true)
     }
     
     private func presentInWindow() {

@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A52D39402B71600700969D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D393F2B71600700969D39 /* AppDelegate.swift */; };
-		A52D39422B71600700969D39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39412B71600700969D39 /* SceneDelegate.swift */; };
 		A52D39442B71600700969D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39432B71600700969D39 /* ViewController.swift */; };
-		A52D39472B71600700969D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52D39452B71600700969D39 /* Main.storyboard */; };
 		A52D39492B71600A00969D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52D39482B71600A00969D39 /* Assets.xcassets */; };
 		A52D394C2B71600A00969D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52D394A2B71600A00969D39 /* LaunchScreen.storyboard */; };
 		A52D39572B71600B00969D39 /* QuickMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39562B71600B00969D39 /* QuickMeetTests.swift */; };
@@ -48,9 +46,7 @@
 /* Begin PBXFileReference section */
 		A52D393C2B71600700969D39 /* QuickMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52D393F2B71600700969D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A52D39412B71600700969D39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A52D39432B71600700969D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A52D39462B71600700969D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A52D39482B71600A00969D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A52D394B2B71600A00969D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A52D394D2B71600A00969D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,9 +117,7 @@
 			children = (
 				A52D396F2B7161F100969D39 /* App */,
 				A52D39702B7161F500969D39 /* Features */,
-				A52D39412B71600700969D39 /* SceneDelegate.swift */,
 				A52D39432B71600700969D39 /* ViewController.swift */,
-				A52D39452B71600700969D39 /* Main.storyboard */,
 				A52D39482B71600A00969D39 /* Assets.xcassets */,
 				A52D394A2B71600A00969D39 /* LaunchScreen.storyboard */,
 				A52D394D2B71600A00969D39 /* Info.plist */,
@@ -171,6 +165,8 @@
 		A52D39712B71629C00969D39 /* AppointmentDetails */ = {
 			isa = PBXGroup;
 			children = (
+				A52D398D2B71668F00969D39 /* Model */,
+				A52D398C2B71668C00969D39 /* Domain */,
 				A52D39732B7162E500969D39 /* UI */,
 			);
 			path = AppointmentDetails;
@@ -179,6 +175,8 @@
 		A52D39722B7162BF00969D39 /* AppointmentList */ = {
 			isa = PBXGroup;
 			children = (
+				A52D398B2B71666900969D39 /* Domain */,
+				A52D398A2B71665E00969D39 /* Model */,
 				A52D39742B7162E900969D39 /* UI */,
 			);
 			path = AppointmentList;
@@ -211,6 +209,34 @@
 				A52D39782B71633900969D39 /* MainCoordinatorProtocol.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A52D398A2B71665E00969D39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A52D398B2B71666900969D39 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A52D398C2B71668C00969D39 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A52D398D2B71668F00969D39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +345,6 @@
 			files = (
 				A52D394C2B71600A00969D39 /* LaunchScreen.storyboard in Resources */,
 				A52D39492B71600A00969D39 /* Assets.xcassets in Resources */,
-				A52D39472B71600700969D39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +380,6 @@
 				A52D39852B71655000969D39 /* AppointmentDetailsViewController+Details.swift in Sources */,
 				A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
-				A52D39422B71600700969D39 /* SceneDelegate.swift in Sources */,
 				A52D39832B71652C00969D39 /* AppointmentDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,14 +417,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A52D39452B71600700969D39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A52D39462B71600700969D39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A52D394A2B71600A00969D39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -543,7 +559,6 @@
 				INFOPLIST_FILE = QuickMeet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,7 +586,6 @@
 				INFOPLIST_FILE = QuickMeet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -11,4 +11,6 @@ protocol MainCoordinatorProtocol {
     
     func presentAppointmentListScreen()
     
+    func presentAppointmenDetailstScreen()
+    
 }
