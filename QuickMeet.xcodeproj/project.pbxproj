@@ -16,6 +16,9 @@
 		A52D39572B71600B00969D39 /* QuickMeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39562B71600B00969D39 /* QuickMeetTests.swift */; };
 		A52D39612B71600B00969D39 /* QuickMeetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39602B71600B00969D39 /* QuickMeetUITests.swift */; };
 		A52D39632B71600B00969D39 /* QuickMeetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39622B71600B00969D39 /* QuickMeetUITestsLaunchTests.swift */; };
+		A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39762B71633000969D39 /* MainCoordinator.swift */; };
+		A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39782B71633900969D39 /* MainCoordinatorProtocol.swift */; };
+		A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D397A2B71638500969D39 /* AppDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A52D395C2B71600B00969D39 /* QuickMeetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickMeetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52D39602B71600B00969D39 /* QuickMeetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMeetUITests.swift; sourceTree = "<group>"; };
 		A52D39622B71600B00969D39 /* QuickMeetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickMeetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A52D39762B71633000969D39 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A52D39782B71633900969D39 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		A52D397A2B71638500969D39 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,6 @@
 			children = (
 				A52D396F2B7161F100969D39 /* App */,
 				A52D39702B7161F500969D39 /* Features */,
-				A52D393F2B71600700969D39 /* AppDelegate.swift */,
 				A52D39412B71600700969D39 /* SceneDelegate.swift */,
 				A52D39432B71600700969D39 /* ViewController.swift */,
 				A52D39452B71600700969D39 /* Main.storyboard */,
@@ -132,6 +137,9 @@
 		A52D396F2B7161F100969D39 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39752B71632500969D39 /* Coordinator */,
+				A52D393F2B71600700969D39 /* AppDelegate.swift */,
+				A52D397A2B71638500969D39 /* AppDependencies.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -173,6 +181,15 @@
 			children = (
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		A52D39752B71632500969D39 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39762B71633000969D39 /* MainCoordinator.swift */,
+				A52D39782B71633900969D39 /* MainCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */,
+				A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */,
 				A52D39442B71600700969D39 /* ViewController.swift in Sources */,
+				A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
 				A52D39422B71600700969D39 /* SceneDelegate.swift in Sources */,
 			);
