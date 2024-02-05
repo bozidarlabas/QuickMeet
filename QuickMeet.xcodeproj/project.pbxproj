@@ -99,6 +99,8 @@
 		A52D393E2B71600700969D39 /* QuickMeet */ = {
 			isa = PBXGroup;
 			children = (
+				A52D396F2B7161F100969D39 /* App */,
+				A52D39702B7161F500969D39 /* Features */,
 				A52D393F2B71600700969D39 /* AppDelegate.swift */,
 				A52D39412B71600700969D39 /* SceneDelegate.swift */,
 				A52D39432B71600700969D39 /* ViewController.swift */,
@@ -125,6 +127,52 @@
 				A52D39622B71600B00969D39 /* QuickMeetUITestsLaunchTests.swift */,
 			);
 			path = QuickMeetUITests;
+			sourceTree = "<group>";
+		};
+		A52D396F2B7161F100969D39 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A52D39702B7161F500969D39 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39712B71629C00969D39 /* AppointmentDetails */,
+				A52D39722B7162BF00969D39 /* AppointmentList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A52D39712B71629C00969D39 /* AppointmentDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39732B7162E500969D39 /* UI */,
+			);
+			path = AppointmentDetails;
+			sourceTree = "<group>";
+		};
+		A52D39722B7162BF00969D39 /* AppointmentList */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39742B7162E900969D39 /* UI */,
+			);
+			path = AppointmentList;
+			sourceTree = "<group>";
+		};
+		A52D39732B7162E500969D39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A52D39742B7162E900969D39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
