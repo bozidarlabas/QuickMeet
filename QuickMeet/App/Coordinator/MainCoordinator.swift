@@ -10,7 +10,12 @@ import UIKit
 class MainCoordinator: MainCoordinatorProtocol {
     
     private var window: UIWindow
-    private var navigation: UINavigationController = UINavigationController()
+    private var navigation: UINavigationController = {
+       let navigation = UINavigationController()
+        navigation.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigation.navigationBar.barTintColor = .secondaryColor
+        return navigation
+    }()
     private var appDependencies = AppDependencies()
     
     init(window: UIWindow) {

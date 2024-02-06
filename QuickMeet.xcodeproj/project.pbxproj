@@ -33,6 +33,18 @@
 		A52D39A72B7172EF00969D39 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39A62B7172EF00969D39 /* CircularButton.swift */; };
 		A52D39AE2B717A5C00969D39 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A52D39AD2B717A5C00969D39 /* Localizable.xcstrings */; };
 		A52D39B12B717A9B00969D39 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39B02B717A9B00969D39 /* String+localization.swift */; };
+		A52D39B32B720F3B00969D39 /* CustomDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39B22B720F3B00969D39 /* CustomDateView.swift */; };
+		A52D39B52B72373600969D39 /* BorderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39B42B72373600969D39 /* BorderLineView.swift */; };
+		A52D39B72B723A9F00969D39 /* LabelWithDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39B62B723A9F00969D39 /* LabelWithDropdown.swift */; };
+		A52D39B92B723EFF00969D39 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39B82B723EFF00969D39 /* PaddedTextField.swift */; };
+		A52D39BD2B72443000969D39 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39BC2B72443000969D39 /* MultilineTextField.swift */; };
+		A52D39BF2B72530000969D39 /* AppointmentItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39BE2B72530000969D39 /* AppointmentItemModel.swift */; };
+		A52D39C22B72539A00969D39 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C12B72539A00969D39 /* AppointmentCollectionViewCell.swift */; };
+		A52D39C42B72577A00969D39 /* AppointmentListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C32B72577A00969D39 /* AppointmentListFlowLayout.swift */; };
+		A52D39C62B72592900969D39 /* UIView+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C52B72592900969D39 /* UIView+DropShadow.swift */; };
+		A52D39C92B72632D00969D39 /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C82B72632D00969D39 /* HomeInfoView.swift */; };
+		A52D39CB2B72727700969D39 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39CA2B72727700969D39 /* AppointmentDetailsViewController.swift */; };
+		A52D39CF2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39CE2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +95,18 @@
 		A52D39A62B7172EF00969D39 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		A52D39AD2B717A5C00969D39 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A52D39B02B717A9B00969D39 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
+		A52D39B22B720F3B00969D39 /* CustomDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDateView.swift; sourceTree = "<group>"; };
+		A52D39B42B72373600969D39 /* BorderLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderLineView.swift; sourceTree = "<group>"; };
+		A52D39B62B723A9F00969D39 /* LabelWithDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithDropdown.swift; sourceTree = "<group>"; };
+		A52D39B82B723EFF00969D39 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		A52D39BC2B72443000969D39 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		A52D39BE2B72530000969D39 /* AppointmentItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentItemModel.swift; sourceTree = "<group>"; };
+		A52D39C12B72539A00969D39 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		A52D39C32B72577A00969D39 /* AppointmentListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListFlowLayout.swift; sourceTree = "<group>"; };
+		A52D39C52B72592900969D39 /* UIView+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadow.swift"; sourceTree = "<group>"; };
+		A52D39C82B72632D00969D39 /* HomeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
+		A52D39CA2B72727700969D39 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
+		A52D39CE2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDetailsViewController+Design.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +205,7 @@
 		A52D39702B7161F500969D39 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39CC2B72727D00969D39 /* AppointmentDetails */,
 				A52D39712B71629C00969D39 /* CreateAppointment */,
 				A52D39722B7162BF00969D39 /* AppointmentList */,
 			);
@@ -220,9 +245,12 @@
 		A52D39742B7162E900969D39 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39C72B7262E500969D39 /* Components */,
+				A52D39C02B72538E00969D39 /* Cell */,
 				A52D397C2B7164D300969D39 /* AppointmentListViewController.swift */,
 				A52D397E2B7164E600969D39 /* AppointmentListViewController+Design.swift */,
 				A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */,
+				A52D39C32B72577A00969D39 /* AppointmentListFlowLayout.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -239,6 +267,7 @@
 		A52D398A2B71665E00969D39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39BE2B72530000969D39 /* AppointmentItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				A52D39A12B71700C00969D39 /* UIButton+tap.swift */,
+				A52D39C52B72592900969D39 /* UIView+DropShadow.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -309,7 +339,12 @@
 		A52D39A52B7172E200969D39 /* ReusableUIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39B22B720F3B00969D39 /* CustomDateView.swift */,
 				A52D39A62B7172EF00969D39 /* CircularButton.swift */,
+				A52D39B42B72373600969D39 /* BorderLineView.swift */,
+				A52D39B62B723A9F00969D39 /* LabelWithDropdown.swift */,
+				A52D39B82B723EFF00969D39 /* PaddedTextField.swift */,
+				A52D39BC2B72443000969D39 /* MultilineTextField.swift */,
 			);
 			path = ReusableUIComponents;
 			sourceTree = "<group>";
@@ -320,6 +355,39 @@
 				A52D39B02B717A9B00969D39 /* String+localization.swift */,
 			);
 			path = FoundationExtensions;
+			sourceTree = "<group>";
+		};
+		A52D39C02B72538E00969D39 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39C12B72539A00969D39 /* AppointmentCollectionViewCell.swift */,
+				A52D39C82B72632D00969D39 /* HomeInfoView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A52D39C72B7262E500969D39 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A52D39CC2B72727D00969D39 /* AppointmentDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39CD2B72728900969D39 /* UI */,
+			);
+			path = AppointmentDetails;
+			sourceTree = "<group>";
+		};
+		A52D39CD2B72728900969D39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39CA2B72727700969D39 /* AppointmentDetailsViewController.swift */,
+				A52D39CE2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,13 +521,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52D39B72B723A9F00969D39 /* LabelWithDropdown.swift in Sources */,
+				A52D39CF2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift in Sources */,
 				A52D399C2B716B0A00969D39 /* CoreDataStack.swift in Sources */,
 				A52D39A42B7171C200969D39 /* Colors.swift in Sources */,
 				A52D39892B7165F400969D39 /* CreateAppointmentPresenter.swift in Sources */,
+				A52D39BD2B72443000969D39 /* MultilineTextField.swift in Sources */,
+				A52D39C92B72632D00969D39 /* HomeInfoView.swift in Sources */,
 				A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */,
 				A52D399F2B716DCF00969D39 /* CircularTransition.swift in Sources */,
+				A52D39CB2B72727700969D39 /* AppointmentDetailsViewController.swift in Sources */,
 				A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */,
+				A52D39B52B72373600969D39 /* BorderLineView.swift in Sources */,
 				A52D39902B7168C800969D39 /* QuickMeet.xcdatamodeld in Sources */,
+				A52D39C22B72539A00969D39 /* AppointmentCollectionViewCell.swift in Sources */,
 				A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */,
 				A52D39942B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */,
 				A52D397D2B7164D300969D39 /* AppointmentListViewController.swift in Sources */,
@@ -468,11 +543,16 @@
 				A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */,
 				A52D39A22B71700C00969D39 /* UIButton+tap.swift in Sources */,
 				A52D39852B71655000969D39 /* CreateAppointmentViewController+Details.swift in Sources */,
+				A52D39BF2B72530000969D39 /* AppointmentItemModel.swift in Sources */,
 				A52D39932B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */,
 				A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */,
+				A52D39B92B723EFF00969D39 /* PaddedTextField.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
+				A52D39C62B72592900969D39 /* UIView+DropShadow.swift in Sources */,
 				A52D39832B71652C00969D39 /* CreateAppointmentViewController.swift in Sources */,
 				A52D39B12B717A9B00969D39 /* String+localization.swift in Sources */,
+				A52D39B32B720F3B00969D39 /* CustomDateView.swift in Sources */,
+				A52D39C42B72577A00969D39 /* AppointmentListFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,9 +724,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4EFQD8RZ6V;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4EFQD8RZ6V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickMeet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -658,8 +741,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.QuickMeet;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bozidar.quick-meet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = QuickMeet;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -671,9 +756,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4EFQD8RZ6V;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4EFQD8RZ6V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickMeet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -685,8 +773,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.QuickMeet;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bozidar.quick-meet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = QuickMeet;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

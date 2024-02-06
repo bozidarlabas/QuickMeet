@@ -16,7 +16,21 @@ class AppointmentListViewController: UIViewController {
     let transition = CircularTransition()
     
     // Views
+    var containerView = UIView()
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return collectionView
+    }()
+    
     var addAppointmentButton = CircularButton()
+    
+    var topViewsContainer = UIView()
+    var borderLine = UIView()
+    var leftInfoView = HomeInfoView()
+    var rightInfoView = HomeInfoView()
+    
     
     convenience init(presenter: AppointmentListPresenter) {
         self.init()
@@ -27,6 +41,8 @@ class AppointmentListViewController: UIViewController {
         super.viewDidLoad()
         buildViews()
         bindUI()
+        title = "title_appointments".localized
+        
     }
     
     private func bindUI() {
@@ -38,6 +54,7 @@ class AppointmentListViewController: UIViewController {
     }
 }
 
+// MARK: - UIViewControllerTransitioningDelegate
 extension AppointmentListViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -55,4 +72,46 @@ extension AppointmentListViewController: UIViewControllerTransitioningDelegate {
         return transition
     }
     
+}
+
+// MARK: - UICollectionViewDataSource
+extension AppointmentListViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter.appointments.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppointmentCollectionViewCell.identifier, for: indexPath) as? AppointmentCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        let appointment = presenter.appointments[indexPath.item]
+        cell.configure(with: appointment)
+        
+        return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension AppointmentListViewController: UICollectionViewDelegate {
+    // Implement delegate methods as needed
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension AppointmentListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height: CGFloat = 100
+        return CGSize(width: collectionView.bounds.width - 30, height: height)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
 }

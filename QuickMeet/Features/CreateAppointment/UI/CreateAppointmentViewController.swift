@@ -5,20 +5,26 @@
 //  Created by Bozidar Labas on 05.02.2024..
 //
 
-import Foundation
 import UIKit
+import Combine
 
 class CreateAppointmentViewController: UIViewController {
     
     // Properties
     private var presenter: CreateAppointmentPresenter!
+    private var cancellables = Set<AnyCancellable>()
     var menuChildren: [UIMenuElement] = []
     
     // Views
-    var dateLabel = UILabel()
-    var dateTimePicker = UIDatePicker()
+    var backButton = UIButton()
+    var stackview = UIStackView()
+    var dateView = CustomDateView()
+    var timeView = CustomDateView()
     var locationLabel = UILabel()
-    var button = UIButton()
+    var locationDropdownView = LabelWithDropdown()
+    var locationDropdownButton: UIButton { locationDropdownView.button }
+    var descriptionTextView = MultilineTextField()
+    var saveButton = UIButton()
     
     let actionClosure = { (action: UIAction) in
         print(action.title)
@@ -37,6 +43,11 @@ class CreateAppointmentViewController: UIViewController {
     }
     
     private func bindUI() {
+        backButton
+            .publisher(for: .touchUpInside)
+            .sink { [weak self] _ in
+                self?.dismiss(animated: true)
+            }.store(in: &cancellables)
     }
     
     private func setup() {

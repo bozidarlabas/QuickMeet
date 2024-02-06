@@ -17,67 +17,95 @@ extension CreateAppointmentViewController: ConstructViewsProtocol  {
     }
     
     func createViews() {
-        view.addSubview(dateLabel)
-        dateLabel.text = "title_date".localized
- 
-        view.addSubview(dateTimePicker)
+        view.addSubview(stackview)
+        stackview.addArrangedSubview(dateView)
+        dateView.label.text = "title_date".localized
+        stackview.addArrangedSubview(timeView)
+        timeView.label.text = "title_time".localized
+        stackview.addArrangedSubview(locationDropdownView)
+        locationDropdownView.label.text = "title_location".localized
+        locationDropdownButton.menu = UIMenu(options: .displayInline, children: menuChildren)
+        locationDropdownButton.showsMenuAsPrimaryAction = true
+        locationDropdownButton.changesSelectionAsPrimaryAction = true
         
-        view.addSubview(locationLabel)
-        locationLabel.text = "title_location".localized
+        view.addSubview(descriptionTextView)
+        descriptionTextView.placeholder = "title_description".localized
         
-        view.addSubview(button)
-        button.menu = UIMenu(options: .displayInline, children: menuChildren)
-        button.showsMenuAsPrimaryAction = true
-        button.changesSelectionAsPrimaryAction = true
+        view.addSubview(backButton)
+        backButton.setBackgroundImage(UIImage(named: "icon_back"), for: .normal)
+        
+        view.addSubview(saveButton)
+        saveButton.setTitle("title_save".localized, for: .normal)
     }
     
     func styleViews() {
         view.backgroundColor = .secondaryColor
-        dateLabel.textColor = .white
-        dateLabel.font = UIFont.systemFont(ofSize: 20.0)
-        dateTimePicker.preferredDatePickerStyle = .compact
-        dateTimePicker.backgroundColor = .white.withAlphaComponent(0.3)
-        dateTimePicker.tintColor = .secondaryColor
-        dateTimePicker.layer.cornerRadius = 4
-        dateTimePicker.layer.masksToBounds = true
+        
+        stackview.axis = .vertical
+        stackview.distribution = .fill
+        stackview.alignment = .fill
+//        stackview.spacing = 15
+        
+        dateView.setPickerMode(.date)
+        timeView.setPickerMode(.time)
         
         locationLabel.textColor = .white
         locationLabel.font = UIFont.systemFont(ofSize: 20.0)
         
-        button.setImage(UIImage(named: "icon_dropdown"), for: .normal)
-        button.semanticContentAttribute = .forceRightToLeft
+        descriptionTextView.textColor = .white
+        descriptionTextView.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.cornerRadius = 4
+        descriptionTextView.backgroundColor = .clear
+        descriptionTextView.tintColor = .white
+        descriptionTextView.font = UIFont.systemFont(ofSize: 20.0)
+        descriptionTextView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
+        backButton.contentMode = .scaleAspectFit
+        backButton.imageView?.contentMode = .scaleAspectFit
+
+        saveButton.backgroundColor = .blueColor
+        saveButton.layer.cornerRadius = 4
+        saveButton.clipsToBounds = true
     }
     
     func defineLayoutForViews() {
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateTimePicker.translatesAutoresizingMaskIntoConstraints = false
-        button.translatesAutoresizingMaskIntoConstraints = false
-        locationLabel.translatesAutoresizingMaskIntoConstraints = false
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        dateView.translatesAutoresizingMaskIntoConstraints = false
+        locationDropdownView.translatesAutoresizingMaskIntoConstraints = false
+        descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        saveButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        // backButton button
+        NSLayoutConstraint.activate([
+            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            backButton.widthAnchor.constraint(equalToConstant: 35),
+            backButton.heightAnchor.constraint(equalToConstant: 35),
+        ])
         
         // Date label layout
         NSLayoutConstraint.activate([
-            dateLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-            dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            stackview.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 15),
+            stackview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            stackview.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            stackview.bottomAnchor.constraint(equalTo: descriptionTextView.topAnchor, constant: -15)
         ])
         
-        // DateTimePicker layout
+//         descriptionTextView layout
         NSLayoutConstraint.activate([
-            dateTimePicker.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 15),
-            dateTimePicker.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
+            descriptionTextView.leadingAnchor.constraint(equalTo: stackview.leadingAnchor),
+            descriptionTextView.trailingAnchor.constraint(equalTo: stackview.trailingAnchor),
+            descriptionTextView.heightAnchor.constraint(equalToConstant: 200)
         ])
         
-        // locationButton button
+        // saveButton layout
         NSLayoutConstraint.activate([
-            locationLabel.topAnchor.constraint(equalTo: dateTimePicker.bottomAnchor, constant: 15),
-            locationLabel.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
-            locationLabel.trailingAnchor.constraint(equalTo: dateLabel.trailingAnchor)
-        ])
-        
-        // Locations dropdown
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 15),
-            button.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
+            saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15),
+            saveButton.leadingAnchor.constraint(equalTo: stackview.leadingAnchor),
+            saveButton.trailingAnchor.constraint(equalTo: stackview.trailingAnchor),
+            saveButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         
     }
