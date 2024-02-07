@@ -29,7 +29,7 @@ class BorderLineView: UIView {
     
     func defineLayoutForViews() {
         guard let superview = superview else { return }
-        
+        translatesAutoresizingMaskIntoConstraints = false
         leadingAnchor.constraint(equalTo: superview.leadingAnchor).isActive = true
         trailingAnchor.constraint(equalTo: superview.trailingAnchor).isActive = true
         heightAnchor.constraint(equalToConstant: 1.0).isActive = true

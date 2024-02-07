@@ -11,6 +11,8 @@ protocol MainCoordinatorProtocol: AnyObject {
     
     func presentAppointmentListScreen()
     
-    func presentCreateAppointmentScreen()
+    func presentCreateAppointmentScreen(selectedModel: AppointmentItemModel?)
+    
+    func presentAppointmentDetailsScreen(selectedModel: AppointmentItemModel)
     
 }

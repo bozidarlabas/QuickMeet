@@ -9,6 +9,20 @@ import Foundation
 
 class AppDependencies {
     
-    let coreDataStack = CoreDataStack()
+    var coreDataStack: CoreDataStack!
+    var appointmentRepository: AppointmentRepositoryProtocol!
+    var appleCalendar: AppleCalendar!
+    var notificationManager: NotificationManager!
+    
+    init() {
+        registerDependencies()
+    }
+    
+    private func registerDependencies() {
+        coreDataStack = CoreDataStack()
+        appointmentRepository = AppointmentRepository(coreData: coreDataStack)
+        appleCalendar = AppleCalendar()
+        notificationManager = NotificationManager()
+    }
     
 }

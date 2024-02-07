@@ -22,6 +22,9 @@ class CustomDateView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
+        label.layer.cornerRadius = 4
+        label.clipsToBounds = true
+        label.backgroundColor = .itemColor
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
@@ -39,6 +42,15 @@ class CustomDateView: UIView {
         border.translatesAutoresizingMaskIntoConstraints = false
         return border
     }()
+    
+    var date: Date? {
+        didSet {
+            if let date = date {
+                datePicker.date = date
+                updateDatePickerLabelValue()
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

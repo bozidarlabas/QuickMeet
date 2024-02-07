@@ -30,14 +30,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // MARK: Navigation bar appearance
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithOpaqueBackground()
+            navigationBarAppearance.shadowColor = .clear
             navigationBarAppearance.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor : UIColor.white
+                NSAttributedString.Key.foregroundColor: UIColor.white
             ]
             navigationBarAppearance.backgroundColor = UIColor.secondaryColor
+            navigationBarAppearance.buttonAppearance.normal.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor.white
+            ]
             UINavigationBar.appearance().standardAppearance = navigationBarAppearance
             UINavigationBar.appearance().compactAppearance = navigationBarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-            
+            UINavigationBar.appearance().tintColor = UIColor.white
+            UINavigationBar.appearance().shadowImage = UIImage()
+
             // MARK: Tab bar appearance
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithOpaqueBackground()
@@ -46,5 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UITabBar.appearance().standardAppearance = tabBarAppearance
         }
     }
+
+
     
 }

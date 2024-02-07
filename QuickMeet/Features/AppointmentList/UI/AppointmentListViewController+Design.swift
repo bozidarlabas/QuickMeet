@@ -21,10 +21,10 @@ extension AppointmentListViewController: ConstructViewsProtocol  {
         view.addSubview(topViewsContainer)
         topViewsContainer.addSubview(borderLine)
         topViewsContainer.addSubview(leftInfoView)
+        leftInfoView.label1.text = "title_today".localized
         
         topViewsContainer.addSubview(rightInfoView)
-        
-        
+        rightInfoView.label1.text = "title_ upcoming".localized
         
         containerView.addSubview(collectionView)
         collectionView.dataSource = self
@@ -36,6 +36,8 @@ extension AppointmentListViewController: ConstructViewsProtocol  {
         
         view.insertSubview(addAppointmentButton, aboveSubview: containerView)
         
+        containerView.addSubview(emptyListLabel)
+        emptyListLabel.text = "message_no_appointments".localized
     }
     
     func styleViews() {
@@ -51,6 +53,11 @@ extension AppointmentListViewController: ConstructViewsProtocol  {
         containerView.clipsToBounds = true
         borderLine.backgroundColor = .black.withAlphaComponent(0.2)
         topViewsContainer.dropShadow()
+        
+        emptyListLabel.textAlignment = .center
+        emptyListLabel.numberOfLines = 0
+        emptyListLabel.font = UIFont.systemFont(ofSize: 20.0)
+        emptyListLabel.textColor = .gray
     }
     
     func defineLayoutForViews() {
@@ -61,9 +68,10 @@ extension AppointmentListViewController: ConstructViewsProtocol  {
         borderLine.translatesAutoresizingMaskIntoConstraints = false
         leftInfoView.translatesAutoresizingMaskIntoConstraints = false
         rightInfoView.translatesAutoresizingMaskIntoConstraints = false
+        emptyListLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topViewsContainer.bottomAnchor, constant: 15),
+            collectionView.topAnchor.constraint(equalTo: topViewsContainer.bottomAnchor, constant: 20),
             collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
@@ -101,6 +109,12 @@ extension AppointmentListViewController: ConstructViewsProtocol  {
             rightInfoView.topAnchor.constraint(equalTo: leftInfoView.topAnchor),
             rightInfoView.bottomAnchor.constraint(equalTo: topViewsContainer.bottomAnchor),
             rightInfoView.trailingAnchor.constraint(equalTo: topViewsContainer.trailingAnchor),
+        ])
+        
+        NSLayoutConstraint.activate([
+            emptyListLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
+            emptyListLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15),
+            emptyListLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
         ])
     }
     

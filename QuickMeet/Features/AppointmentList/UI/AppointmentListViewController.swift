@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 import Combine
 
 class AppointmentListViewController: UIViewController {
@@ -26,11 +27,11 @@ class AppointmentListViewController: UIViewController {
     
     var addAppointmentButton = CircularButton()
     
+    var emptyListLabel = UILabel()
     var topViewsContainer = UIView()
     var borderLine = UIView()
     var leftInfoView = HomeInfoView()
     var rightInfoView = HomeInfoView()
-    
     
     convenience init(presenter: AppointmentListPresenter) {
         self.init()
@@ -41,8 +42,9 @@ class AppointmentListViewController: UIViewController {
         super.viewDidLoad()
         buildViews()
         bindUI()
+        updateUI()
         title = "title_appointments".localized
-        
+        hero.isEnabled = true
     }
     
     private func bindUI() {
@@ -51,6 +53,31 @@ class AppointmentListViewController: UIViewController {
             .sink { [weak self] _ in
                 self?.presenter.addAppointmentButtonSelected()
             }.store(in: &cancellables)
+        
+        presenter
+            .appointmentsPublisher
+            .sink { [weak self] _ in
+                self?.updateUI()
+                self?.collectionView.reloadData()
+            }.store(in: &cancellables)
+        
+        presenter.startObserving()
+    }
+    
+    private func updateUI() {
+        if presenter.numberOfTodayAppointments == 1 {
+            leftInfoView.label2.text = String(format: "title_one_appointment".localized, presenter.numberOfTodayAppointments)
+        } else {
+            leftInfoView.label2.text = String(format: "title_multiple_appointments".localized, presenter.numberOfTodayAppointments)
+        }
+        
+        if presenter.numberOfUpcomingAppointments == 1 {
+            rightInfoView.label2.text = String(format: "title_one_appointment".localized, presenter.numberOfUpcomingAppointments)
+        } else {
+            rightInfoView.label2.text = String(format: "title_multiple_appointments".localized, presenter.numberOfUpcomingAppointments)
+        }
+
+        emptyListLabel.isHidden = !presenter.appointments.isEmpty
     }
 }
 
@@ -82,13 +109,16 @@ extension AppointmentListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppointmentCollectionViewCell.identifier, for: indexPath) as? AppointmentCollectionViewCell else {
+        guard 
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppointmentCollectionViewCell.identifier, for: indexPath) as? AppointmentCollectionViewCell,
+            let appointment = presenter.appointments[safeIndex: indexPath.item]
+        else {
             return UICollectionViewCell()
         }
         
-        let appointment = presenter.appointments[indexPath.item]
         cell.configure(with: appointment)
-        
+        cell.hero.id = "\(AnimationConstants.listToDetailsKey) \(appointment.id)"
+        cell.dateTimeLabel.hero.id = "\(AnimationConstants.listToDetailsDateTimeKey) \(appointment.id)"
         return cell
     }
     
@@ -99,7 +129,10 @@ extension AppointmentListViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension AppointmentListViewController: UICollectionViewDelegate {
-    // Implement delegate methods as needed
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let appointment = presenter.appointments[safeIndex: indexPath.item] else { return }
+        presenter.appointmentItemSelected(selectedModel: appointment)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

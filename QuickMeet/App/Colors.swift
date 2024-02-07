@@ -8,9 +8,7 @@
 import UIKit
 
 extension UIColor {
-    public static var backgroundColor = UIColor(named: "FFFFFF")!
-    public static var secondaryColor = UIColor(named: "0B3754")!
-    public static var itemColor = UIColor(named: "2e4d62")!
-    public static var blueColor = UIColor(named: "2AA9E0")!
+    public static var backgroundColor = UIColor(named: "F7F7F7")!
+    public static var secondaryColor = UIColor(named: "008B8F")!
+    public static var itemColor = UIColor(named: "00BDC2")!
 }
-

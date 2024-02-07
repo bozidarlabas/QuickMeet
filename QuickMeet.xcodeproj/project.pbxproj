@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A9AAC8D39F05FFE9D30C29 /* Pods_QuickMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139B716CD125425E129338A1 /* Pods_QuickMeet.framework */; };
+		A503718D2B73625E001CAE65 /* AppleCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503718C2B73625E001CAE65 /* AppleCalendar.swift */; };
+		A503718F2B736444001CAE65 /* LabelWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A503718E2B736444001CAE65 /* LabelWithSwitch.swift */; };
+		A5118FD72B7377830077428C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5118FD62B7377830077428C /* NotificationManager.swift */; };
 		A52D39402B71600700969D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D393F2B71600700969D39 /* AppDelegate.swift */; };
 		A52D39492B71600A00969D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A52D39482B71600A00969D39 /* Assets.xcassets */; };
 		A52D394C2B71600A00969D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A52D394A2B71600A00969D39 /* LaunchScreen.storyboard */; };
@@ -24,8 +28,6 @@
 		A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */; };
 		A52D39892B7165F400969D39 /* CreateAppointmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39882B7165F400969D39 /* CreateAppointmentPresenter.swift */; };
 		A52D39902B7168C800969D39 /* QuickMeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A52D398E2B7168C800969D39 /* QuickMeet.xcdatamodeld */; };
-		A52D39932B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39912B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift */; };
-		A52D39942B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39922B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift */; };
 		A52D399C2B716B0A00969D39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D399B2B716B0A00969D39 /* CoreDataStack.swift */; };
 		A52D399F2B716DCF00969D39 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D399E2B716DCF00969D39 /* CircularTransition.swift */; };
 		A52D39A22B71700C00969D39 /* UIButton+tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39A12B71700C00969D39 /* UIButton+tap.swift */; };
@@ -40,11 +42,20 @@
 		A52D39BD2B72443000969D39 /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39BC2B72443000969D39 /* MultilineTextField.swift */; };
 		A52D39BF2B72530000969D39 /* AppointmentItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39BE2B72530000969D39 /* AppointmentItemModel.swift */; };
 		A52D39C22B72539A00969D39 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C12B72539A00969D39 /* AppointmentCollectionViewCell.swift */; };
-		A52D39C42B72577A00969D39 /* AppointmentListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C32B72577A00969D39 /* AppointmentListFlowLayout.swift */; };
 		A52D39C62B72592900969D39 /* UIView+DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C52B72592900969D39 /* UIView+DropShadow.swift */; };
 		A52D39C92B72632D00969D39 /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39C82B72632D00969D39 /* HomeInfoView.swift */; };
 		A52D39CB2B72727700969D39 /* AppointmentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39CA2B72727700969D39 /* AppointmentDetailsViewController.swift */; };
 		A52D39CF2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39CE2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift */; };
+		A52D39D12B7274A400969D39 /* AppointmentDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39D02B7274A400969D39 /* AppointmentDetailsPresenter.swift */; };
+		A52D39D62B727F4B00969D39 /* AppointmentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39D52B727F4B00969D39 /* AppointmentRepository.swift */; };
+		A52D39D82B727F5100969D39 /* AppointmentRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39D72B727F5100969D39 /* AppointmentRepositoryProtocol.swift */; };
+		A52D39DA2B727FF500969D39 /* CoreDataStackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39D92B727FF500969D39 /* CoreDataStackProtocol.swift */; };
+		A52D39F12B72A2FE00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39EF2B72A2FE00969D39 /* AppointmentItem+CoreDataClass.swift */; };
+		A52D39F22B72A2FE00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39F02B72A2FE00969D39 /* AppointmentItem+CoreDataProperties.swift */; };
+		A52D39F42B72A6F800969D39 /* AnimationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39F32B72A6F800969D39 /* AnimationConstants.swift */; };
+		A52D39F62B72A7AF00969D39 /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39F52B72A7AF00969D39 /* Array+Safe.swift */; };
+		A52D39F82B72A83100969D39 /* TowLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39F72B72A83100969D39 /* TowLabelsView.swift */; };
+		A52D39FA2B72B2B900969D39 /* ReusableAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D39F92B72B2B900969D39 /* ReusableAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		139B716CD125425E129338A1 /* Pods_QuickMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D6E36E9DF7934979899D867 /* Pods-QuickMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeet.release.xcconfig"; path = "Target Support Files/Pods-QuickMeet/Pods-QuickMeet.release.xcconfig"; sourceTree = "<group>"; };
+		61A769CF3BD9E5F5BBC6F159 /* Pods-QuickMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickMeet.debug.xcconfig"; path = "Target Support Files/Pods-QuickMeet/Pods-QuickMeet.debug.xcconfig"; sourceTree = "<group>"; };
+		A503718C2B73625E001CAE65 /* AppleCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleCalendar.swift; sourceTree = "<group>"; };
+		A503718E2B736444001CAE65 /* LabelWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithSwitch.swift; sourceTree = "<group>"; };
+		A5118FD62B7377830077428C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A52D393C2B71600700969D39 /* QuickMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52D393F2B71600700969D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A52D39482B71600A00969D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,8 +103,6 @@
 		A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListPresenter.swift; sourceTree = "<group>"; };
 		A52D39882B7165F400969D39 /* CreateAppointmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAppointmentPresenter.swift; sourceTree = "<group>"; };
 		A52D398F2B7168C800969D39 /* QuickMeet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickMeet.xcdatamodel; sourceTree = "<group>"; };
-		A52D39912B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A52D39922B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A52D399B2B716B0A00969D39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A52D399E2B716DCF00969D39 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		A52D39A12B71700C00969D39 /* UIButton+tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+tap.swift"; sourceTree = "<group>"; };
@@ -102,11 +117,20 @@
 		A52D39BC2B72443000969D39 /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
 		A52D39BE2B72530000969D39 /* AppointmentItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentItemModel.swift; sourceTree = "<group>"; };
 		A52D39C12B72539A00969D39 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
-		A52D39C32B72577A00969D39 /* AppointmentListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListFlowLayout.swift; sourceTree = "<group>"; };
 		A52D39C52B72592900969D39 /* UIView+DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadow.swift"; sourceTree = "<group>"; };
 		A52D39C82B72632D00969D39 /* HomeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
 		A52D39CA2B72727700969D39 /* AppointmentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewController.swift; sourceTree = "<group>"; };
 		A52D39CE2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppointmentDetailsViewController+Design.swift"; sourceTree = "<group>"; };
+		A52D39D02B7274A400969D39 /* AppointmentDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsPresenter.swift; sourceTree = "<group>"; };
+		A52D39D52B727F4B00969D39 /* AppointmentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRepository.swift; sourceTree = "<group>"; };
+		A52D39D72B727F5100969D39 /* AppointmentRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A52D39D92B727FF500969D39 /* CoreDataStackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackProtocol.swift; sourceTree = "<group>"; };
+		A52D39EF2B72A2FE00969D39 /* AppointmentItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppointmentItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A52D39F02B72A2FE00969D39 /* AppointmentItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppointmentItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A52D39F32B72A6F800969D39 /* AnimationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationConstants.swift; sourceTree = "<group>"; };
+		A52D39F52B72A7AF00969D39 /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
+		A52D39F72B72A83100969D39 /* TowLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowLabelsView.swift; sourceTree = "<group>"; };
+		A52D39F92B72B2B900969D39 /* ReusableAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A9AAC8D39F05FFE9D30C29 /* Pods_QuickMeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +159,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E149D4CD6473260424187E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				139B716CD125425E129338A1 /* Pods_QuickMeet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A52D39332B71600700969D39 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +174,8 @@
 				A52D39552B71600B00969D39 /* QuickMeetTests */,
 				A52D395F2B71600B00969D39 /* QuickMeetUITests */,
 				A52D393D2B71600700969D39 /* Products */,
+				E8CD9896130C9C6BC35A1AC8 /* Pods */,
+				8E149D4CD6473260424187E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +233,7 @@
 				A52D398E2B7168C800969D39 /* QuickMeet.xcdatamodeld */,
 				A52D39A32B7171C200969D39 /* Colors.swift */,
 				A52D39AD2B717A5C00969D39 /* Localizable.xcstrings */,
+				A52D39F32B72A6F800969D39 /* AnimationConstants.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -225,7 +261,6 @@
 		A52D39722B7162BF00969D39 /* AppointmentList */ = {
 			isa = PBXGroup;
 			children = (
-				A52D398B2B71666900969D39 /* Domain */,
 				A52D398A2B71665E00969D39 /* Model */,
 				A52D39742B7162E900969D39 /* UI */,
 			);
@@ -245,12 +280,10 @@
 		A52D39742B7162E900969D39 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A52D39C72B7262E500969D39 /* Components */,
 				A52D39C02B72538E00969D39 /* Cell */,
 				A52D397C2B7164D300969D39 /* AppointmentListViewController.swift */,
 				A52D397E2B7164E600969D39 /* AppointmentListViewController+Design.swift */,
 				A52D39862B7165D500969D39 /* AppointmentListPresenter.swift */,
-				A52D39C32B72577A00969D39 /* AppointmentListFlowLayout.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -272,13 +305,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A52D398B2B71666900969D39 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		A52D398C2B71668C00969D39 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +315,8 @@
 		A52D398D2B71668F00969D39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A503718C2B73625E001CAE65 /* AppleCalendar.swift */,
+				A5118FD62B7377830077428C /* NotificationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,8 +332,8 @@
 		A52D39962B716A3600969D39 /* AppointmentItem */ = {
 			isa = PBXGroup;
 			children = (
-				A52D39912B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift */,
-				A52D39922B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift */,
+				A52D39EF2B72A2FE00969D39 /* AppointmentItem+CoreDataClass.swift */,
+				A52D39F02B72A2FE00969D39 /* AppointmentItem+CoreDataProperties.swift */,
 			);
 			path = AppointmentItem;
 			sourceTree = "<group>";
@@ -315,6 +343,7 @@
 			children = (
 				A52D39952B716A2A00969D39 /* Models */,
 				A52D399B2B716B0A00969D39 /* CoreDataStack.swift */,
+				A52D39D92B727FF500969D39 /* CoreDataStackProtocol.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -345,6 +374,9 @@
 				A52D39B62B723A9F00969D39 /* LabelWithDropdown.swift */,
 				A52D39B82B723EFF00969D39 /* PaddedTextField.swift */,
 				A52D39BC2B72443000969D39 /* MultilineTextField.swift */,
+				A52D39F72B72A83100969D39 /* TowLabelsView.swift */,
+				A52D39F92B72B2B900969D39 /* ReusableAlertController.swift */,
+				A503718E2B736444001CAE65 /* LabelWithSwitch.swift */,
 			);
 			path = ReusableUIComponents;
 			sourceTree = "<group>";
@@ -353,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				A52D39B02B717A9B00969D39 /* String+localization.swift */,
+				A52D39F52B72A7AF00969D39 /* Array+Safe.swift */,
 			);
 			path = FoundationExtensions;
 			sourceTree = "<group>";
@@ -366,16 +399,10 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		A52D39C72B7262E500969D39 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		A52D39CC2B72727D00969D39 /* AppointmentDetails */ = {
 			isa = PBXGroup;
 			children = (
+				A52D39D32B727F3C00969D39 /* Data */,
 				A52D39CD2B72728900969D39 /* UI */,
 			);
 			path = AppointmentDetails;
@@ -386,8 +413,35 @@
 			children = (
 				A52D39CA2B72727700969D39 /* AppointmentDetailsViewController.swift */,
 				A52D39CE2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift */,
+				A52D39D02B7274A400969D39 /* AppointmentDetailsPresenter.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		A52D39D32B727F3C00969D39 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39D42B727F3F00969D39 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A52D39D42B727F3F00969D39 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A52D39D52B727F4B00969D39 /* AppointmentRepository.swift */,
+				A52D39D72B727F5100969D39 /* AppointmentRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E8CD9896130C9C6BC35A1AC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61A769CF3BD9E5F5BBC6F159 /* Pods-QuickMeet.debug.xcconfig */,
+				2D6E36E9DF7934979899D867 /* Pods-QuickMeet.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,9 +451,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A52D39662B71600B00969D39 /* Build configuration list for PBXNativeTarget "QuickMeet" */;
 			buildPhases = (
+				02864C21CC564E0BB5FCD060 /* [CP] Check Pods Manifest.lock */,
 				A52D39382B71600700969D39 /* Sources */,
 				A52D39392B71600700969D39 /* Frameworks */,
 				A52D393A2B71600700969D39 /* Resources */,
+				2C1CA95E846029F5B6172083 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -516,6 +572,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02864C21CC564E0BB5FCD060 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickMeet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C1CA95E846029F5B6172083 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickMeet/Pods-QuickMeet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickMeet/Pods-QuickMeet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickMeet/Pods-QuickMeet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A52D39382B71600700969D39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -523,10 +621,14 @@
 			files = (
 				A52D39B72B723A9F00969D39 /* LabelWithDropdown.swift in Sources */,
 				A52D39CF2B72729A00969D39 /* AppointmentDetailsViewController+Design.swift in Sources */,
+				A52D39F42B72A6F800969D39 /* AnimationConstants.swift in Sources */,
+				A52D39F82B72A83100969D39 /* TowLabelsView.swift in Sources */,
 				A52D399C2B716B0A00969D39 /* CoreDataStack.swift in Sources */,
+				A52D39F12B72A2FE00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */,
 				A52D39A42B7171C200969D39 /* Colors.swift in Sources */,
 				A52D39892B7165F400969D39 /* CreateAppointmentPresenter.swift in Sources */,
 				A52D39BD2B72443000969D39 /* MultilineTextField.swift in Sources */,
+				A52D39D82B727F5100969D39 /* AppointmentRepositoryProtocol.swift in Sources */,
 				A52D39C92B72632D00969D39 /* HomeInfoView.swift in Sources */,
 				A52D39872B7165D500969D39 /* AppointmentListPresenter.swift in Sources */,
 				A52D399F2B716DCF00969D39 /* CircularTransition.swift in Sources */,
@@ -534,25 +636,31 @@
 				A52D397B2B71638500969D39 /* AppDependencies.swift in Sources */,
 				A52D39B52B72373600969D39 /* BorderLineView.swift in Sources */,
 				A52D39902B7168C800969D39 /* QuickMeet.xcdatamodeld in Sources */,
+				A5118FD72B7377830077428C /* NotificationManager.swift in Sources */,
 				A52D39C22B72539A00969D39 /* AppointmentCollectionViewCell.swift in Sources */,
 				A52D39792B71633900969D39 /* MainCoordinatorProtocol.swift in Sources */,
-				A52D39942B716A0C00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */,
+				A52D39DA2B727FF500969D39 /* CoreDataStackProtocol.swift in Sources */,
 				A52D397D2B7164D300969D39 /* AppointmentListViewController.swift in Sources */,
 				A52D397F2B7164E600969D39 /* AppointmentListViewController+Design.swift in Sources */,
 				A52D39A72B7172EF00969D39 /* CircularButton.swift in Sources */,
 				A52D39772B71633000969D39 /* MainCoordinator.swift in Sources */,
 				A52D39A22B71700C00969D39 /* UIButton+tap.swift in Sources */,
 				A52D39852B71655000969D39 /* CreateAppointmentViewController+Details.swift in Sources */,
+				A52D39D12B7274A400969D39 /* AppointmentDetailsPresenter.swift in Sources */,
 				A52D39BF2B72530000969D39 /* AppointmentItemModel.swift in Sources */,
-				A52D39932B716A0C00969D39 /* AppointmentItem+CoreDataClass.swift in Sources */,
+				A503718D2B73625E001CAE65 /* AppleCalendar.swift in Sources */,
+				A52D39F62B72A7AF00969D39 /* Array+Safe.swift in Sources */,
+				A52D39D62B727F4B00969D39 /* AppointmentRepository.swift in Sources */,
 				A52D39812B7164FF00969D39 /* ConstructViewsProtocol.swift in Sources */,
 				A52D39B92B723EFF00969D39 /* PaddedTextField.swift in Sources */,
 				A52D39402B71600700969D39 /* AppDelegate.swift in Sources */,
 				A52D39C62B72592900969D39 /* UIView+DropShadow.swift in Sources */,
 				A52D39832B71652C00969D39 /* CreateAppointmentViewController.swift in Sources */,
+				A52D39F22B72A2FE00969D39 /* AppointmentItem+CoreDataProperties.swift in Sources */,
 				A52D39B12B717A9B00969D39 /* String+localization.swift in Sources */,
+				A503718F2B736444001CAE65 /* LabelWithSwitch.swift in Sources */,
 				A52D39B32B720F3B00969D39 /* CustomDateView.swift in Sources */,
-				A52D39C42B72577A00969D39 /* AppointmentListFlowLayout.swift in Sources */,
+				A52D39FA2B72B2B900969D39 /* ReusableAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +829,7 @@
 		};
 		A52D39672B71600B00969D39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A769CF3BD9E5F5BBC6F159 /* Pods-QuickMeet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -730,8 +839,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4EFQD8RZ6V;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickMeet/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need access to your calendar for event scheduling.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -741,10 +852,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bozidar.quick-meet";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.meet.quick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = QuickMeet;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = QuickMeetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -753,6 +864,7 @@
 		};
 		A52D39682B71600B00969D39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6E36E9DF7934979899D867 /* Pods-QuickMeet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -762,8 +874,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4EFQD8RZ6V;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickMeet/Info.plist;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need access to your calendar for event scheduling.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -773,10 +887,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bozidar.quick-meet";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.meet.quick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = QuickMeet;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = QuickMeetApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -788,6 +902,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4EFQD8RZ6V;
@@ -796,6 +911,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.QuickMeetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -808,6 +924,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4EFQD8RZ6V;
@@ -816,6 +933,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bozidar.QuickMeetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

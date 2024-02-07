@@ -6,28 +6,66 @@
 //
 
 import Foundation
+import Combine
 
 class AppointmentListPresenter {
     
     private weak var coordinator: MainCoordinatorProtocol?
+    private var repository: AppointmentRepositoryProtocol
+    var appointments: [AppointmentItemModel] = []
     
-    let appointments: [AppointmentItemModel] = [
-        AppointmentItemModel(details: "Meeting with Client A", dateTime: Date(), location: "Office 123"),
-        AppointmentItemModel(details: "Conference Call", dateTime: Date(timeIntervalSinceNow: 3600), location: "Virtual"),
-        AppointmentItemModel(details: "Lunch with Team", dateTime: Date(timeIntervalSinceNow: 7200), location: "Cafeteria"),
-        AppointmentItemModel(details: "Meeting with Client A", dateTime: Date(), location: "Office 123"),
-        AppointmentItemModel(details: "Conference Call", dateTime: Date(timeIntervalSinceNow: 3600), location: "Virtual"),
-        AppointmentItemModel(details: "Lunch with Team", dateTime: Date(timeIntervalSinceNow: 7200), location: "Cafeteria"),
-        AppointmentItemModel(details: "Meeting with Client A", dateTime: Date(), location: "Office 123"),
-        AppointmentItemModel(details: "Conference Call", dateTime: Date(timeIntervalSinceNow: 3600), location: "Virtual"),
-        AppointmentItemModel(details: "Lunch with Team", dateTime: Date(timeIntervalSinceNow: 7200), location: "Cafeteria"),
-    ]
     
-    init(coordinator: MainCoordinatorProtocol) {
+    var numberOfTodayAppointments: Int {
+        let currentDate = Calendar.current.startOfDay(for: Date())
+        return appointments.filter { appointment in
+            let appointmentDate = Calendar.current.startOfDay(for: appointment.date)
+            return appointmentDate == currentDate
+        }.count
+    }
+    
+    var numberOfUpcomingAppointments: Int {
+        let currentDate = Calendar.current.startOfDay(for: Date())
+        
+        return appointments.filter { appointment in
+            let appointmentDate = Calendar.current.startOfDay(for: appointment.date)
+            return appointmentDate >= currentDate
+        }.count
+    }
+    
+    var appointmentsPublisher: AnyPublisher<[AppointmentItemModel], Never> {
+        repository
+            .appointmentsPublisher
+            .handleEvents(receiveOutput: { [weak self] appointmentItemModels in
+                guard let self = self else { return }
+                appointments = appointmentItemModels.sorted(by: sortByDateTime)
+            })
+            .eraseToAnyPublisher()
+    }
+    
+    init(
+        coordinator: MainCoordinatorProtocol,
+        repository: AppointmentRepositoryProtocol
+    ) {
         self.coordinator = coordinator
+        self.repository = repository
     }
     
     func addAppointmentButtonSelected() {
-        coordinator?.presentCreateAppointmentScreen()
+        coordinator?.presentCreateAppointmentScreen(selectedModel: nil)
+    }
+    
+    func appointmentItemSelected(selectedModel: AppointmentItemModel) {
+        coordinator?.presentAppointmentDetailsScreen(selectedModel: selectedModel)
+    }
+    
+    func startObserving() {
+        repository.observeChanges()
+    }
+    
+    let sortByDateTime: (AppointmentItemModel, AppointmentItemModel) -> Bool = { model1, model2 in
+        let dateTime1 = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: model1.date)?.addingTimeInterval(model1.time.timeIntervalSinceReferenceDate) ?? Date()
+        let dateTime2 = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: model2.date)?.addingTimeInterval(model2.time.timeIntervalSinceReferenceDate) ?? Date()
+
+        return dateTime1 < dateTime2
     }
 }
